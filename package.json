@@ -5,10 +5,14 @@
         "type": "git",
         "url": "https://github.com/kongu-zz/ktl-shared"
     },
+    "scripts": {
+        "build": "tsc"
+    },
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
-        "dist/"
+        "dist/",
+        "typings/"
     ],
     "devDependencies": {
         "awesome-typescript-loader": "^0.15.10",
