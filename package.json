@@ -1,18 +1,20 @@
 {
     "name": "ktl-shared",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/kongu-zz/ktl-shared"
     },
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "prepublish": "typings install && npm run build"
     },
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
         "dist/",
-        "typings/"
+        "typings/",
+        "typings.json"
     ],
     "devDependencies": {
         "awesome-typescript-loader": "^0.15.10",
