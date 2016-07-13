@@ -1,2 +1,4 @@
 import * as React from "react";
-export const OnlyDate = ({ date }) => React.createElement("span", {className: "date"}, date);
+export const OnlyDate = (params) => {
+    return (React.createElement("span", {className: "date"}, params.date));
+};

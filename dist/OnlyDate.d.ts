@@ -1,3 +1,4 @@
-export declare const OnlyDate: ({date}: {
+export interface IParams {
     date: any;
-}) => JSX.Element;
+}
+export declare const OnlyDate: (params: IParams) => JSX.Element;
