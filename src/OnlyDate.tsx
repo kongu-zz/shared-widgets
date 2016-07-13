@@ -1,7 +1,5 @@
 import * as React from "react";
 
-export interface IParams { date: any; }
-
-export const OnlyDate = (params: IParams) => {
+export const OnlyDate = (params: { date: any; }) => {
     return (<span className="date">{params.date}</span>);
 }
