@@ -41,7 +41,7 @@
         "typescript": "^1.8.10"
     },
     "dependencies": {
-        "react": "^15.2.0",
-        "react-dom": "^15.2.0"
+        "react": "15.0.1",
+        "react-dom": "15.0.1"
     }
 }
