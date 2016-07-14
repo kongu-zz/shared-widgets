@@ -1,4 +1,5 @@
-import * as React from "react";
-export const OnlyDate = (params) => {
+"use strict";
+var React = require("react");
+exports.OnlyDate = function (params) {
     return (React.createElement("span", {className: "date"}, params.date));
 };

@@ -1,6 +1,6 @@
 {
     "name": "ktl-shared",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "repository": {
         "type": "git",
         "url": "https://github.com/kongu-zz/ktl-shared"
@@ -38,7 +38,7 @@
         "rimraf": "^2.4.4",
         "run-sequence": "^1.1.5",
         "ts-loader": "^0.8.1",
-        "typescript": "^1.8.2"
+        "typescript": "^1.8.10"
     },
     "dependencies": {
         "react": "^15.2.0",
