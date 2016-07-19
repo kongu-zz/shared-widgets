@@ -7,7 +7,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepublish": "typings install && npm run build"
+    "prepublish": "typings install && npm run build",
+    "pretest": "tsc test/*.tsx --module commonjs",
+    "test": "mocha"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,17 +26,27 @@
     "chai": "^3.5.0",
     "enzyme": "^2.4.0",
     "jsdom": "^9.4.1",
+    "json-loader": "^0.5.4",
     "jsx-control-statements": "^3.1.0",
     "karma": "^1.1.1",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-mocha": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sinon": "^1.0.5",
     "karma-typescript-preprocessor": "^0.2.1",
+    "karma-typescript-preprocessor2": "^1.2.1",
+    "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
+    "phantomjs-prebuilt": "^2.1.7",
     "pug": "^0.1.0",
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
-    "typescript": "^1.8.10"
+    "sinon": "^1.17.4",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.1"
   },
   "dependencies": {}
 }
