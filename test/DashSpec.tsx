@@ -8,7 +8,7 @@ import { shallow } from "enzyme";
 describe("<Dash/>", () => {
   it("<Dash/> contains -", () => {
     const wrapper = shallow(<Dash/>);
-    //wrapper.contains
+
     expect(wrapper.text()).is.equal("—");
   });
 });
