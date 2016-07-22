@@ -1,2 +1,2 @@
-export { Dash } from "./Dash";
-export { OnlyDate } from "./OnlyDate";
+export { Dash } from "./Component/Elemental/Dash";
+export { OnlyDate } from "./Component/Elemental/OnlyDate";

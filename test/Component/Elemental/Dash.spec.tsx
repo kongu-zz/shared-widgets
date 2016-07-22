@@ -1,7 +1,7 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../../../typings/index.d.ts" />
 import * as React from "react";
 import {expect} from "chai";
-import {Dash} from "../src/Dash";
+import {Dash} from "../../../src/Component/Elemental/Dash";
 
 import { shallow } from "enzyme";
 

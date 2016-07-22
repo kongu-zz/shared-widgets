@@ -3,11 +3,15 @@ module.exports = function (wallaby) {
   return {
     files: [
       "src/*.ts",
-      "src/*.tsx"
+      "src/*.tsx",
+      "src/**/*.ts",
+      "src/**/*.tsx"
     ],
     tests: [
       "test/*.ts",
-      "test/*.tsx"
+      "test/*.tsx",
+      "test/**/*.ts",
+      "test/**/*.tsx"
     ],
     compilers: {
       "**/*.ts*": wallaby.compilers.typeScript({module: 'es6'}),
