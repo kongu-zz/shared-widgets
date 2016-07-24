@@ -6,7 +6,7 @@
         "target": "es5",
         "noImplicitAny": true,
         "removeComments": false,
-        "noEmitHelpers": true,
+        "noEmitHelpers": false,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "jsx": "react",
