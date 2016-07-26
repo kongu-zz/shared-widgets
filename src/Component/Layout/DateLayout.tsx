@@ -2,10 +2,11 @@
 import * as React from "react";
 import {changeDateToCurrentTimeZone, IFnChangeDateToCurrentTimeZone} from "../../Component/Logic/changeDateToCurrentTimeZone";
 import {checkCorrectDate, IFnCheckCorrectDate} from "../../Component/Logic/checkCorrectDate";
+import {dateToString} from "../../Component/Logic/dateTimeFormats";
 import {DateParseException} from "../../Exception/DateParseException";
+
 import {Dash} from "../../Component/Elemental/Dash";
 import {DateOnly} from "../../Component/Elemental/DateOnly";
-import {theWrapper} from "../../Component/Logic/theWrapper";
 
 export interface IProps { data: any; }
 
@@ -42,9 +43,8 @@ export class DateLayout extends React.Component<IProps, IState> {
     public render(): JSX.Element {
         try {
             const stringDate = this.props.data;
-                this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data))
-                    .format("MMM D, YYYY");
-            // let WrappedDateOnly = theWrapper(null)(DateOnly);
+                dateToString(this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY");
+
             return <DateOnly date={stringDate}/>;
         } catch (ex) {
             if (ex instanceof DateParseException) {

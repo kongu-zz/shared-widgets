@@ -15,8 +15,9 @@ export const theWrapper = (...params: any[]): any => {
             }
 
             render() {
-                //objectAssign
+                // objectAssign
                 let newProps = objectAssign({}, this.props);
+                // let newProps = (...this.props);
 
 
                 return <WrappedComponent {...newProps}/>;

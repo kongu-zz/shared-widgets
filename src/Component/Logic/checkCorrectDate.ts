@@ -2,6 +2,10 @@ import moment from "moment";
 import {DateParseException} from "../../Exception/DateParseException";
 
 export const checkCorrectDate = (date: any): Date => {
+    if (date === null) {
+        throw new DateParseException(`Error parsing Date`);
+    }
+
     // пробуем один формат
     let correctDate = Date.parse(date);
 
