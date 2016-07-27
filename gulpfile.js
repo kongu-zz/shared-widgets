@@ -49,7 +49,7 @@ gulp.task('react:build', function () {
             // 'react/lib/ReactContext': true,
             "react": "React",
             "react-dom": "ReactDOM",
-            // "moment": "moment"
+            "moment": "moment"
         },
         ts: {
             compiler: "typescript"
