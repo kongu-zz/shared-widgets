@@ -20,10 +20,7 @@ module.exports = {
     'cheerio': 'window',
     'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true,
-    "react": "React",
-    "react-dom": "ReactDOM",
-    "moment": "moment"
+    'react/lib/ReactContext': true
     
   }
 }

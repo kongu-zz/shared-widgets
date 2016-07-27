@@ -1,4 +1,4 @@
-export declare const changeDateToCurrentTimeZone: (date: Date) => moment.Moment;
+export declare const changeDateToCurrentTimeZone: (date: Date) => Date;
 export interface IFnChangeDateToCurrentTimeZone {
-    (date: Date): moment.Moment;
+    (date: Date): Date;
 }
