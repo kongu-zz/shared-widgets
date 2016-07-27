@@ -1,11 +1,26 @@
+var dwebpack = require('webpack');
+
 module.exports = {
   entry: './src/index.ts',
   output: {
     filename: 'dist/bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.js', '.tsx', '.jsx', '']
+    extensions: ['.ts', '.js', '.tsx', '.jsx', ''],
+    modules: [
+      "node_modules"
+    ]
   },
+  plugins: [
+    new dwebpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new dwebpack.DefinePlugin({
+      "process.env": { NODE_ENV: JSON.stringify("production") }
+    }),
+    new dwebpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+  ],
   module: {
     loaders: [
       {
@@ -24,6 +39,5 @@ module.exports = {
     "react": "React",
     "react-dom": "ReactDOM",
     "moment": "moment"
-    
   }
 }
