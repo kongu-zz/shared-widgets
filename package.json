@@ -10,9 +10,7 @@
   "typings": "dist/index.d.ts",
   "files": [
     "lib/",
-    "dist/",
-    "typings/",
-    "typings.json"
+    "dist/"
   ],
   "devDependencies": {
     "babel-core": "^6.11.4",
@@ -42,8 +40,7 @@
     "karma-mocha": "^1.1.1",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-sinon": "^1.0.5",
-    "karma-typescript-preprocessor": "^0.2.1",
-    "karma-typescript-preprocessor2": "^1.2.1",
+
     "karma-webpack": "1.7.0",
     "mocha": "^2.5.3",
     "path": "0.12.7",
@@ -53,7 +50,7 @@
     "run-sequence": "^1.2.2",
     "sinon": "^1.17.4",
     "ts-loader": "^0.8.2",
-    "typescript": "^1.8.10",
+    "typescript": "^2.1.0-dev.20160728",
     "webpack": "^1.13.1"
   },
   "dependencies": {

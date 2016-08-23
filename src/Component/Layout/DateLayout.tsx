@@ -42,12 +42,15 @@ export class DateLayout extends React.Component<IProps, IState> {
 
     public render(): JSX.Element {
         try {
-            const stringDate = this.props.data;
-                dateToString(this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY");
+            // const stringDate = this.props.data;
+            //     dateToString(this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY");
 
-            return <DateOnly date={stringDate}/>;
+            return <DateOnly
+                date={dateToString(
+                        this.fnChangeDateToCurrentTimeZone(
+                            this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY")}/>;
         } catch (ex) {
-            if (ex instanceof DateParseException) {
+            if (ex.name === "DateParseException") {
                 return <Dash/>;
             } else {
                 throw ex;

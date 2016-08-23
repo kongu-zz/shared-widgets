@@ -6,14 +6,23 @@ export const checkCorrectDate = (date: any): Date => {
         throw new DateParseException(`Error parsing Date`);
     }
 
+    let correctDate: number;
     // пробуем один формат
-    let correctDate = Date.parse(date);
+    try {
+        correctDate = Date.parse(date);
+    } catch (ex) {
+        throw new DateParseException(`Error parsing Date`);
+    }
 
     // пробуем другой формат
     if (isNaN(correctDate) === true) {
-        let re = /-?\d+/;
-        let m = re.exec(date);
-        correctDate = parseInt(m[0]);
+        try {
+            let re = /-?\d+/;
+            let m = re.exec(date);
+            correctDate = parseInt(m[0]);
+        } catch (ex) {
+            throw new DateParseException(`Error parsing Date`);
+        }
     }
 
     if (isNaN(correctDate) === false) {
