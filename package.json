@@ -3,7 +3,7 @@
   "version": "0.0.15",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kongu-zz/ktl-shared"
+    "url": "https://github.com/kongu-zz/shared-widgets"
   },
   "scripts": {},
   "main": "lib/index.js",
