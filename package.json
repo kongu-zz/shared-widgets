@@ -1,6 +1,6 @@
 {
-  "name": "ktl-shared",
-  "version": "0.0.15",
+  "name": "shared-widgets",
+  "version": "0.0.16",
   "repository": {
     "type": "git",
     "url": "https://github.com/kongu-zz/shared-widgets"
