@@ -4,6 +4,7 @@ import { IDateRange } from "./IDateRange";
 export interface IProps {
     value?: string;
     onChange?: (dateRange: IDateRange, isHide?: boolean) => void;
+    isInline?: boolean;
 }
 export interface IState {
     from?: Date;

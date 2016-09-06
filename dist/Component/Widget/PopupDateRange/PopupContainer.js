@@ -50,8 +50,12 @@ export default class PopupContainer extends React.Component {
         };
     }
     render() {
+        let style = { width: "578px", height: "348px", position: "relative", backgroundColor: "#fff", border: "solid 1px #ddd" };
+        if (this.props.isInline) {
+            style.float = "right";
+        }
         return (React.createElement("div", null, 
-            React.createElement("div", {style: { width: "578px", height: "348px", position: "relative", backgroundColor: "#fff", border: "solid 1px #ddd" }}, 
+            React.createElement("div", {style: style}, 
                 React.createElement("div", {style: { width: "578px", position: "absolute" }}, 
                     React.createElement("div", {style: { float: "left", width: "259px", margin: "20px 20px 20px 20px" }}, 
                         React.createElement(Calendar, {defaultValue: this.state.from, onChange: this.fromChange})

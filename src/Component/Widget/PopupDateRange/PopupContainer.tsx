@@ -7,7 +7,7 @@ const momentLocalizer = require("react-widgets/lib/localizers/moment");
 momentLocalizer(moment);
 import {IDateRange} from "./IDateRange";
 
-export interface IProps { value?: string; onChange?: (dateRange: IDateRange, isHide?: boolean) => void;  }
+export interface IProps { value?: string; onChange?: (dateRange: IDateRange, isHide?: boolean) => void; isInline?: boolean;  }
 
 export interface IState { from?: Date; to?: Date; }
 
@@ -67,9 +67,14 @@ export default class PopupContainer extends React.Component<IProps, IState> {
     };
 
     public render(): JSX.Element {
+        let style = {width: "578px", height: "348px", position: "relative", backgroundColor: "#fff", border: "solid 1px #ddd"};
+        if (this.props.isInline) {
+            (style as any).float = "right";
+        }
+
         return (
             <div>
-                <div style={{width: "578px", height: "348px", position: "relative", backgroundColor: "#fff", border: "solid 1px #ddd"}}>
+                <div style={style}>
                     <div style={{width: "578px", position: "absolute"}}>
                         <div style={{float: "left", width: "259px", margin: "20px 20px 20px 20px"}}>
                             <Calendar defaultValue={this.state.from} onChange={this.fromChange}/>

@@ -7,10 +7,9 @@ const enhanceWithClickOutside = require("react-click-outside");
 import PopupContainer from "./PopupContainer";
 import {IDateRange} from "./IDateRange";
 
-
 export interface IProps { value?: string; onChange?: (value: any) => void; isInline?: boolean; }
 
-export interface IState { opened?: boolean; selectedValue?: string; }
+interface IState { opened?: boolean; selectedValue?: string; }
 
 class PopupDateRangeInner extends React.Component<IProps, IState> {
 
@@ -62,12 +61,11 @@ class PopupDateRangeInner extends React.Component<IProps, IState> {
     public render(): JSX.Element {
         let userInfoPopup: JSX.Element = null;
         if (this.state.opened) {
-            userInfoPopup = <PopupContainer value={this.state.selectedValue}  onChange={this.onChange}/>;
+            userInfoPopup = <PopupContainer value={this.state.selectedValue}  onChange={this.onChange} isInline={this.props.isInline}/>;
         }
-
         let style = {};
         if (this.props.isInline) {
-            style = {display: "inlineBlock"};
+            style = {display: "inline-block"};
         }
 
         return (
