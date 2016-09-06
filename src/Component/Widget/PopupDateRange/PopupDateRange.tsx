@@ -8,7 +8,7 @@ import PopupContainer from "./PopupContainer";
 import {IDateRange} from "./IDateRange";
 
 
-export interface IProps { value?: string; onChange?: (value: any) => void; style?: any; }
+export interface IProps { value?: string; onChange?: (value: any) => void; isInline?: boolean; }
 
 export interface IState { opened?: boolean; selectedValue?: string; }
 
@@ -65,8 +65,13 @@ class PopupDateRangeInner extends React.Component<IProps, IState> {
             userInfoPopup = <PopupContainer value={this.state.selectedValue}  onChange={this.onChange}/>;
         }
 
+        let style = {};
+        if (this.props.isInline) {
+            style = {display: "inlineBlock"};
+        }
+
         return (
-            <div className={"dropdown-container" + (this.state.opened ? " show" : "") } style={this.props.style}>
+            <div className={"dropdown-container" + (this.state.opened ? " show" : "") } style={style}>
                 <div className="form-group form-date">
                     <input type="text" className="form-input" ref="container" value={this.state.selectedValue} onChange={this.inputOnChange}/>
                     <button onClick={this.show} className="form-date-picker btn-clear b-icon icon-date-pick"></button>

@@ -1,7 +1,7 @@
 export interface IProps {
     value?: string;
     onChange?: (value: any) => void;
-    style?: any;
+    isInline?: boolean;
 }
 export interface IState {
     opened?: boolean;

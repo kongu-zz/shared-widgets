@@ -41,7 +41,11 @@ class PopupDateRangeInner extends React.Component {
         if (this.state.opened) {
             userInfoPopup = React.createElement(PopupContainer, {value: this.state.selectedValue, onChange: this.onChange});
         }
-        return (React.createElement("div", {className: "dropdown-container" + (this.state.opened ? " show" : ""), style: this.props.style}, 
+        let style = {};
+        if (this.props.isInline) {
+            style = { display: "inlineBlock" };
+        }
+        return (React.createElement("div", {className: "dropdown-container" + (this.state.opened ? " show" : ""), style: style}, 
             React.createElement("div", {className: "form-group form-date"}, 
                 React.createElement("input", {type: "text", className: "form-input", ref: "container", value: this.state.selectedValue, onChange: this.inputOnChange}), 
                 React.createElement("button", {onClick: this.show, className: "form-date-picker btn-clear b-icon icon-date-pick"})), 
