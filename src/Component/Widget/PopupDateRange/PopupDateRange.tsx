@@ -7,9 +7,9 @@ const enhanceWithClickOutside = require("react-click-outside");
 import PopupContainer from "./PopupContainer";
 import {IDateRange} from "./IDateRange";
 
-export interface IProps { value?: string; onChange?: (value: any) => void; isInline?: boolean; }
+export interface IProps { value?: string; onChange?: (value: any) => void; isInline?: boolean; onDateSelected?: (value: any) => void; }
 
-interface IState { opened?: boolean; selectedValue?: string; }
+export interface IState { opened?: boolean; selectedValue?: string; }
 
 class PopupDateRangeInner extends React.Component<IProps, IState> {
 
@@ -46,6 +46,10 @@ class PopupDateRangeInner extends React.Component<IProps, IState> {
         }
 
         this.setState({ selectedValue: `${from}-${to}`, opened: !isHide });
+
+        if (isHide && this.props.onDateSelected) {
+            this.props.onDateSelected(`${from}-${to}`);
+        }
     };
 
     private inputOnChange = (event: React.MouseEvent & React.KeyboardEvent): void => {
@@ -84,4 +88,4 @@ class PopupDateRangeInner extends React.Component<IProps, IState> {
     }
 }
 
-export const PopupDateRange = enhanceWithClickOutside(PopupDateRangeInner);
+export const PopupDateRange: React.Component<IProps, IState> = enhanceWithClickOutside(PopupDateRangeInner);
