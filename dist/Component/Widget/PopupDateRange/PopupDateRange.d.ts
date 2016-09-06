@@ -8,4 +8,4 @@ export interface IState {
     opened?: boolean;
     selectedValue?: string;
 }
-export declare const PopupDateRange: JSX.Element;
+export declare const PopupDateRange: any;
