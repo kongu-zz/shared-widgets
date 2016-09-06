@@ -57,11 +57,13 @@
         "ts-loader": "0.8.1",
         "typescript": "2.0.0",
         "webpack": "^1.13.1",
+
         "classnames": "2.2.5",
         "react": "^0.14.0 || ^15.0.0",
         "react-dom": "^0.14.0 || ^15.0.0",
         "moment": "^2.0.0",
-        "react-widgets": "^3.4.4"
+        "react-widgets": "^3.4.4",
+        "react-click-outside": "2.1.0"
     },
     "dependencies": {
         "object-assign": "^4.1.0"
@@ -71,6 +73,7 @@
         "react": "^0.14.0 || ^15.0.0",
         "react-dom": "^0.14.0 || ^15.0.0",
         "moment": "^2.0.0",
-        "react-widgets": "^3.4.4"
+        "react-widgets": "^3.4.4",
+        "react-click-outside": "2.1.0"
     }
 }
