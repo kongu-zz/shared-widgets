@@ -11,12 +11,13 @@
         "experimentalDecorators": true,
         "jsx": "react",
         "noEmitOnError": true,
-        
+        "allowSyntheticDefaultImports": true,
+
         "declaration": true,
         "outDir": "dist/"
     },
     "files": [
         "./typings/index.d.ts",
-	    "./src/index.ts"
+        "./src/index.ts"
     ]
 }

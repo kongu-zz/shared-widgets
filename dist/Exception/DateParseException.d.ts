@@ -1,3 +1,1 @@
-export declare class DateParseException extends Error {
-    constructor(message: string);
-}
+export declare const DateParseException: any;

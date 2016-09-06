@@ -6,3 +6,4 @@ export { DateParseException } from "./Exception/DateParseException";
 export { changeDateToCurrentTimeZone } from "./Component/Logic/changeDateToCurrentTimeZone";
 export { checkCorrectDate } from "./Component/Logic/checkCorrectDate";
 export { dateToString } from "./Component/Logic/dateTimeFormats";
+export { PopupDateRange } from "./Component/Widget/PopupDateRange/PopupDateRange";

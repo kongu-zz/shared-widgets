@@ -2,7 +2,6 @@ import * as React from "react";
 import { changeDateToCurrentTimeZone } from "../../Component/Logic/changeDateToCurrentTimeZone";
 import { checkCorrectDate } from "../../Component/Logic/checkCorrectDate";
 import { dateToString } from "../../Component/Logic/dateTimeFormats";
-import { DateParseException } from "../../Exception/DateParseException";
 import { Dash } from "../../Component/Elemental/Dash";
 import { DateOnly } from "../../Component/Elemental/DateOnly";
 export class DateLayout extends React.Component {
@@ -25,12 +24,12 @@ export class DateLayout extends React.Component {
     }
     render() {
         try {
-            const stringDate = this.props.data;
-            dateToString(this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY");
-            return React.createElement(DateOnly, {date: stringDate});
+            // const stringDate = this.props.data;
+            //     dateToString(this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY");
+            return React.createElement(DateOnly, {date: dateToString(this.fnChangeDateToCurrentTimeZone(this.fnCheckCorrectDate(this.props.data)), "MMM D, YYYY")});
         }
         catch (ex) {
-            if (ex instanceof DateParseException) {
+            if (ex.name === "DateParseException") {
                 return React.createElement(Dash, null);
             }
             else {

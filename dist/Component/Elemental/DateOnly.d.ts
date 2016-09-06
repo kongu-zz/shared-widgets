@@ -1,3 +1,3 @@
 export declare const DateOnly: (params: {
-    date: any;
+    date: string;
 }) => JSX.Element;
