@@ -66,7 +66,7 @@ class PopupDateRangeInner extends React.Component<IProps, IState> {
         }
 
         return (
-            <div className={"dropdown-container" + (this.state.opened ? " show" : "") } >
+            <div className={"dropdown-container" + (this.state.opened ? " show" : "") } {...this.props} >
                 <div className="form-group form-date">
                     <input type="text" className="form-input" ref="container" value={this.state.selectedValue} onChange={this.inputOnChange}/>
                     <button onClick={this.show} className="form-date-picker btn-clear b-icon icon-date-pick"></button>
