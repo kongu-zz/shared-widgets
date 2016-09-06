@@ -1,8 +1,9 @@
+import { IDateRange } from "./IDateRange";
 export interface IProps {
     value?: string;
     onChange?: (value: any) => void;
     isInline?: boolean;
-    onDateSelected?: (value: any) => void;
+    onDateSelected?: (dateRange: IDateRange) => void;
 }
 export interface IState {
     opened?: boolean;

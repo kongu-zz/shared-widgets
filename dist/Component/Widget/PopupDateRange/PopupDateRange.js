@@ -23,7 +23,7 @@ class PopupDateRangeInner extends React.Component {
             }
             this.setState({ selectedValue: `${from}-${to}`, opened: !isHide });
             if (isHide && this.props.onDateSelected) {
-                this.props.onDateSelected(`${from}-${to}`);
+                this.props.onDateSelected(dateRange);
             }
         };
         this.inputOnChange = (event) => {
