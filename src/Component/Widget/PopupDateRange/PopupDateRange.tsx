@@ -88,4 +88,4 @@ class PopupDateRangeInner extends React.Component<IProps, IState> {
     }
 }
 
-export const PopupDateRange: React.Component<IProps, IState> = enhanceWithClickOutside(PopupDateRangeInner);
+export const PopupDateRange: JSX.Element = enhanceWithClickOutside(PopupDateRangeInner);
