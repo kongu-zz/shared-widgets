@@ -39,8 +39,8 @@ export default class PopupContainer extends React.Component {
             let splited = value.split("-");
             if (splited.length > 1) {
                 return {
-                    from: moment(splited[0]).toDate(),
-                    to: moment(splited[1]).toDate()
+                    from: moment(splited[0], "MM.DD.YYYY").toDate(),
+                    to: moment(splited[1], "MM.DD.YYYY").toDate()
                 };
             }
         }
