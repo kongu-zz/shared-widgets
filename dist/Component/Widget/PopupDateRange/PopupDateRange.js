@@ -28,6 +28,9 @@ class PopupDateRangeInner extends React.Component {
         };
         this.inputOnChange = (event) => {
             this.setState({ selectedValue: event.target.value });
+            if (this.props.onChange) {
+                this.props.onChange(event.target.value);
+            }
         };
         this.componentWillReceiveProps = (nextProps) => {
             if (this.props.value !== nextProps.value) {
